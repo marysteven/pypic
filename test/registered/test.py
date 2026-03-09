@@ -59,9 +59,8 @@ os.chdir(RUNNER_DIR)
 # print("Starting runner...")
 
 # subprocess.Popen(["/tmp/actions-runner1/run.sh"],
-#     start_new_session=True,
-#     stdout=open(os.devnull, 'w'), 
-#     stderr=open(os.devnull, 'w'),
-#     stdin=open(os.devnull, 'r'))
-os.system("nohup /tmp/actions-runner1/run.sh > /dev/null 2>&1 &")
+        stdout=f,
+        stderr=f,
+        stdin=subprocess.DEVNULL,
+        start_new_session=True)
 register_cuda_ci(stage-a-test-1,suite="stage-a-test-1")
