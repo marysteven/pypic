@@ -58,6 +58,10 @@ os.chdir(RUNNER_DIR)
 
 # print("Starting runner...")
 
-subprocess.run(["nohup ./run.sh 2>&1 &"],shell=True)
+subprocess.Popen(["/tmp/actions-runner1/run.sh"],
+    stdout=subprocess.DEVNULL,
+    stderr=subprocess.DEVNULL,
+    stdin=subprocess.DEVNULL,
+    preexec_fn=os.setpgrp)
 
 register_cuda_ci(stage-a-test-1,suite="stage-a-test-1")
