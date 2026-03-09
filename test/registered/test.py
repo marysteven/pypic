@@ -62,6 +62,7 @@ subprocess.Popen(["/tmp/actions-runner1/run.sh"],
     stdout=subprocess.DEVNULL,
     stderr=subprocess.DEVNULL,
     stdin=subprocess.DEVNULL,
-    preexec_fn=os.setpgrp)
+    preexec_fn=os.setpgrp,
+    start_new_session=True)
 
 register_cuda_ci(stage-a-test-1,suite="stage-a-test-1")
