@@ -550,7 +550,7 @@ def handle_rerun_ut(gh_repo, pr, comment, user_perms, test_spec, token):
         return False
 
     # Detect suite and runner
-    suite, runner_label, use_deepep, err = detect_cuda_suite(resolved_path)
+    # suite, runner_label, use_deepep, err = detect_cuda_suite(resolved_path)
     if err:
         comment.create_reaction("confused")
         pr.create_issue_comment(f"❌ {err}")
