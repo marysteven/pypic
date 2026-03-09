@@ -34,7 +34,7 @@ permissions:
 
 jobs:
   rerun-ut-cuda:
-    runs-on: ${{ inputs.runner_label }}
+    runs-on: self-hosted
     timeout-minutes: 120
     env:
       RUNNER_LABELS: ${{ inputs.runner_label }}
