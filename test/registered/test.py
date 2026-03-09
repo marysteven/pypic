@@ -42,16 +42,16 @@ os.chdir(RUNNER_DIR)
 
 # print("Configuring runner...")
 
-subprocess.run([
-    "./config.sh",
-    "--url", REPO_URL,
-    "--token", TOKEN,
-    "--name", RUNNER_NAME,
-    "--work", "_work",
-    "--unattended",
-    "--replace",
-    "&"
-], check=True)
+# subprocess.run([
+#     "./config.sh",
+#     "--url", REPO_URL,
+#     "--token", TOKEN,
+#     "--name", RUNNER_NAME,
+#     "--work", "_work",
+#     "--unattended",
+#     "--replace",
+#     "&"
+# ], check=True)
 
 # print("Runner configured")
 
