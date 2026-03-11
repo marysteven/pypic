@@ -20,7 +20,7 @@
 FULL_DEEPSEEK_V3_MODEL_PATH = "deepseek-ai/DeepSeek-V3-0324"
 
 
-class TestDeepseekV3Basic(CustomTestCase):
+class TestDeepseekV3Basic():
     @classmethod
     def setUpClass(cls):
         cls.model = FULL_DEEPSEEK_V3_MODEL_PATH
