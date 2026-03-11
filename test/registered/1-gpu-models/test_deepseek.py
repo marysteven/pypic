@@ -1,4 +1,5 @@
 import unittest
+import requests
 
 # from sglang.test.ci.ci_register import register_cuda_ci
 # from sglang.test.kits.gsm8k_accuracy_kit import GSM8KMixin
