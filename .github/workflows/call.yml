@@ -1,0 +1,33 @@
+name: call
+
+on:
+  pull_request_target:
+    types: [ready_for_review]
+    branches:
+      - main
+
+permissions:
+  pull-requests: write
+  contents: read
+
+jobs:
+  assign-reviewer:
+    runs-on: ubuntu-latest
+    if: ${{ !github.event.pull_request.draft }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: pip install requests slack-sdk
+
+      - name: Assign Reviewer
+        env:
+          GH_TOKEN: ${{ secrets.PAT }}
+        run: |
+          python .github/scripts/oncall_manager.py
